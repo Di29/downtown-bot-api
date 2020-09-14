@@ -33,6 +33,11 @@ public class ReportService implements ReportInterface {
     }
 
     @Override
+    public List<Report> getReportsByServiceName(String name) {
+        return reportRepository.findReportsByServiceName(name);
+    }
+
+    @Override
     public void addReport(ReportInsertUpdateDTO reportInsertUpdateDTO) {
         Report report = new Report(reportInsertUpdateDTO);
         reportRepository.save(report);

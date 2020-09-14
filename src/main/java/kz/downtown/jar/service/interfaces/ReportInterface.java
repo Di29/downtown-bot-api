@@ -13,6 +13,8 @@ public interface ReportInterface {
 
     List<Report> getReportsByBlockId(Long id);
 
+    List<Report> getReportsByServiceName(String name);
+
     void addReport(ReportInsertUpdateDTO reportInsertUpdateDTO);
 
     void removeReportById(Long id);

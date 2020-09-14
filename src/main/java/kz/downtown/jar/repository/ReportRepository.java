@@ -9,4 +9,6 @@ public interface ReportRepository extends JpaRepository<Report, Long> {
 
     List<Report> findReportsByBlockId(Long blockId);
 
+    List<Report> findReportsByServiceName(String name);
+
 }
