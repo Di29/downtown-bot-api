@@ -37,8 +37,8 @@ public class CallController {
         return new ResponseEntity<>(call, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "block/{name}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> getCallsByBlockName(@PathVariable("name") String name) {
+    @RequestMapping(value = "block/name", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> getCallsByBlockName(@RequestParam("name") String name) {
         if(name == null)
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 
@@ -49,10 +49,10 @@ public class CallController {
         return new ResponseEntity<>(calls, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "block/{bname}/service/{sname}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "block/bname/service/sname", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> getCallsByBlockNameAndServiceName(
-            @PathVariable("bname") String blockName,
-            @PathVariable("sname") String serviceName) {
+            @RequestParam("bname") String blockName,
+            @RequestParam("sname") String serviceName) {
         if((blockName == null) || (serviceName == null))
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 

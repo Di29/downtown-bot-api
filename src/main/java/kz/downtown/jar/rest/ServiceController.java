@@ -9,11 +9,10 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Base64;
 import java.util.List;
 
 @RestController
-@RequestMapping("services")
+@RequestMapping("botservices")
 public class ServiceController {
 
     private final ServiceService service;
@@ -39,8 +38,8 @@ public class ServiceController {
         return new ResponseEntity<>(service1, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "name/{name}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> getServiceByName(@PathVariable("name") String name) {
+    @RequestMapping(value = "name/name", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> getServiceByName(@RequestParam("name") String name) {
         Service service1 = service.getServiceByName(name);
         if (service1 == null)
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);

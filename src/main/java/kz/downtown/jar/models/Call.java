@@ -4,6 +4,7 @@ import kz.downtown.jar.dtos.CallInsertUpdateDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -31,6 +32,7 @@ public class Call {
     @Column(name = "office_number")
     private Long officeNumber;
 
+    @CreationTimestamp
     @Column(name = "created_at")
     private Date createdAt;
 
