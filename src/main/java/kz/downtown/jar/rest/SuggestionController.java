@@ -45,8 +45,8 @@ public class SuggestionController {
         return new ResponseEntity<>(suggestion, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "service/name/{name}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> getReportsByServiceName(@PathVariable("name") String name) {
+    @RequestMapping(value = "service/name", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> getReportsByServiceName(@RequestParam("name") String name) {
         List<Suggestion> suggestions = service.getAllSuggestionsByServiceName(name);
         if (suggestions.isEmpty())
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);

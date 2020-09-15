@@ -38,7 +38,7 @@ public class ServiceController {
         return new ResponseEntity<>(service1, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "name/name", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "name", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> getServiceByName(@RequestParam("name") String name) {
         Service service1 = service.getServiceByName(name);
         if (service1 == null)

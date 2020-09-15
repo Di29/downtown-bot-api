@@ -49,10 +49,10 @@ public class CallController {
         return new ResponseEntity<>(calls, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "block/bname/service/sname", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "block/{bname}/service/name", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> getCallsByBlockNameAndServiceName(
-            @RequestParam("bname") String blockName,
-            @RequestParam("sname") String serviceName) {
+            @PathVariable("bname") String blockName,
+            @RequestParam("name") String serviceName) {
         if((blockName == null) || (serviceName == null))
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 

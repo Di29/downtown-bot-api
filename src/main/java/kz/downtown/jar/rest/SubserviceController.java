@@ -46,8 +46,8 @@ public class SubserviceController {
         return new ResponseEntity<>(subservice, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "subservice/name/{name}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> getSubserviceByName(@PathVariable("name") String name) {
+    @RequestMapping(value = "subservice/name", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> getSubserviceByName(@RequestParam("name") String name) {
         Subservice subservice = service.getSubserviceByName(name);
         if (subservice == null)
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);

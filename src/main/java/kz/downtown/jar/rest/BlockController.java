@@ -39,7 +39,7 @@ public class BlockController {
         return new ResponseEntity<>(blocks, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "name/name", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "name", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> getBlockByName(@RequestParam("name") String name) {
         if (name.isEmpty())
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);

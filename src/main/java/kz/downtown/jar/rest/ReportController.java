@@ -45,8 +45,8 @@ public class ReportController {
         return new ResponseEntity<>(reports, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "service/name/{name}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> getReportsByServiceName(@PathVariable("name") String name) {
+    @RequestMapping(value = "service/name", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> getReportsByServiceName(@RequestParam("name") String name) {
         List<Report> reports = service.getReportsByServiceName(name);
         if (reports.isEmpty())
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);

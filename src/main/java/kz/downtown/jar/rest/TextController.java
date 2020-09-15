@@ -31,8 +31,8 @@ public class TextController {
         return new ResponseEntity<>(texts, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "name/{name}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> getTextByName(@PathVariable("name") String textName) {
+    @RequestMapping(value = "name", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> getTextByName(@RequestParam("name") String textName) {
         if (textName.isEmpty())
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 
