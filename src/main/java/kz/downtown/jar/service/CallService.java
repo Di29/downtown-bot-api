@@ -62,4 +62,9 @@ public class CallService implements CallInterface {
         Call call = new Call(callInsertUpdateDTO);
         callRepository.save(call);
     }
+
+    @Override
+    public List<String> detRecords() {
+        return callRepository.findCallRecords();
+    }
 }

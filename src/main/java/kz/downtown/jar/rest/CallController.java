@@ -62,6 +62,15 @@ public class CallController {
         return new ResponseEntity<>(calls, HttpStatus.OK);
     }
 
+    @RequestMapping(value = "records", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> getRecords() {
+        List<String> count = callService.detRecords();
+        return new ResponseEntity<>(count, HttpStatus.OK);
+    }
+
+
+
+
     @RequestMapping(value = "admin/add", method = RequestMethod.POST)
     public ResponseEntity<?> addCall(@RequestBody CallInsertUpdateDTO dto) {
         try {

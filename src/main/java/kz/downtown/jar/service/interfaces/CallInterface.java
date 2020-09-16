@@ -23,4 +23,5 @@ public interface CallInterface {
 
     void updateCall(CallInsertUpdateDTO callInsertUpdateDTO) throws Exception;
 
+    List<String> detRecords();
 }
