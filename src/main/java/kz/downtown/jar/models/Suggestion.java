@@ -22,7 +22,7 @@ public class Suggestion {
     private String suggestionText;
 
     @Column(name = "block_id")
-    private Long blockId;
+    private String blockId;
 
     @Column(name = "service_name")
     private String serviceName;

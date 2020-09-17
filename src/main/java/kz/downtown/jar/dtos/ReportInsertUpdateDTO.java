@@ -6,6 +6,6 @@ import lombok.Data;
 public class ReportInsertUpdateDTO {
     private Long id;
     private String reportText;
-    private Long blockId;
+    private String blockId;
     private String serviceName;
 }

@@ -22,7 +22,7 @@ public class Report {
     private String reportText;
 
     @Column(name = "block_id")
-    private Long blockId;
+    private String blockId;
 
     @Column(name = "service_name")
     private String serviceName;

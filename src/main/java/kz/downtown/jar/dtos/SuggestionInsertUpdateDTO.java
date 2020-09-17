@@ -6,6 +6,6 @@ import lombok.Data;
 public class SuggestionInsertUpdateDTO {
     private Long id;
     private String suggestionText;
-    private Long blockId;
+    private String blockId;
     private String serviceName;
 }
