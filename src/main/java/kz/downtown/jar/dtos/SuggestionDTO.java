@@ -7,7 +7,7 @@ import lombok.Data;
 public class SuggestionDTO {
     private Long id;
     private String suggestionText;
-    private Long blockId;
+    private String blockId;
     private String serviceName;
 
     public SuggestionDTO(Suggestion suggestion) {

@@ -7,7 +7,7 @@ import lombok.Data;
 public class ReportDTO {
     private Long id;
     private String reportText;
-    private Long blockId;
+    private String blockId;
     private String serviceName;
 
     public ReportDTO(Report report) {
