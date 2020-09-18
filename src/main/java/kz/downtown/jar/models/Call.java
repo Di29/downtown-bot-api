@@ -30,7 +30,7 @@ public class Call {
     private String subserviceName;
 
     @Column(name = "office_number")
-    private Long officeNumber;
+    private String officeNumber;
 
     @CreationTimestamp
     @Column(name = "created_at")

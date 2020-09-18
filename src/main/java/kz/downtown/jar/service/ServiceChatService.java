@@ -45,6 +45,7 @@ public class ServiceChatService implements ServiceChatInterface {
     @Override
     public void addServiceChat(ServiceChatInsertUpdateDTO serviceChatInsertUpdateDTO) {
         ServiceChat serviceChat = new ServiceChat(serviceChatInsertUpdateDTO);
+        repository.save(serviceChat);
     }
 
     @Override

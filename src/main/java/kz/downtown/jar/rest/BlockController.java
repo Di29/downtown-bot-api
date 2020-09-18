@@ -32,7 +32,7 @@ public class BlockController {
 
     @RequestMapping(value = "", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> getAllBlocks() {
-        List<Block> blocks = blockService.getAllBlocks();
+        List<Block> blocks = blockService.getBlocksSorted();
 
         if(blocks.isEmpty())
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -51,15 +51,16 @@ public class BlockController {
         return new ResponseEntity<>(blocks, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "add", method = RequestMethod.POST)
+    @RequestMapping(value = "admin/add", method = RequestMethod.POST)
     public ResponseEntity<?> createBlock(@RequestBody BlockInsertUpdateDTO blockInsertUpdateDTO) {
         try {
+            blockInsertUpdateDTO.setId(0L);
             blockService.addBlock(blockInsertUpdateDTO);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
 
-        return ResponseEntity.ok().body("A new block was created");
+        return ResponseEntity.status(HttpStatus.OK).body("New block was added");
     }
 
     @RequestMapping(value = "admin/update", method = RequestMethod.PUT)

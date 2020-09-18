@@ -11,7 +11,7 @@ public class CallDTO {
     private String blockName;
     private String serviceName;
     private String subserviceName;
-    private Long officeNumber;
+    private String officeNumber;
     private Date createdAt;
 
     public CallDTO(Call call) {

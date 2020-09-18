@@ -10,6 +10,6 @@ public class CallInsertUpdateDTO {
     private String blockName;
     private String serviceName;
     private String subserviceName;
-    private Long officeNumber;
+    private String officeNumber;
     private Date createdAt;
 }
