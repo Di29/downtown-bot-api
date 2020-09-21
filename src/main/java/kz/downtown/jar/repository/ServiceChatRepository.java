@@ -13,5 +13,5 @@ public interface ServiceChatRepository extends JpaRepository<ServiceChat, Long> 
 
     List<ServiceChat> findServiceChatsByBlockId(Long blockId);
 
-    List<ServiceChat> findServiceChatsByBlockIdAndServiceId(Long blockId, Long serviceId);
+    ServiceChat findServiceChatsByBlockIdAndServiceId(Long blockId, Long serviceId);
 }

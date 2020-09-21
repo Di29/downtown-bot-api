@@ -43,7 +43,7 @@ public class ServiceChatService implements ServiceChatInterface {
     }
 
     @Override
-    public List<ServiceChat> getServiceChatsByBlockIdAndServiceId(Long blockId, Long serviceId) {
+    public ServiceChat getServiceChatsByBlockIdAndServiceId(Long blockId, Long serviceId) {
         return repository.findServiceChatsByBlockIdAndServiceId(blockId, serviceId);
     }
 
