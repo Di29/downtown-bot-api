@@ -43,11 +43,6 @@ public class ServiceChatService implements ServiceChatInterface {
     }
 
     @Override
-    public ServiceChat getServiceChatsByBlockIdAndServiceId(Long blockId, Long serviceId) {
-        return repository.findServiceChatsByBlockIdAndServiceId(blockId, serviceId);
-    }
-
-    @Override
     public void addServiceChat(ServiceChatInsertUpdateDTO serviceChatInsertUpdateDTO) {
         ServiceChat serviceChat = new ServiceChat(serviceChatInsertUpdateDTO);
         repository.save(serviceChat);

@@ -61,13 +61,13 @@ public class ServiceChatController {
         return new ResponseEntity<>(chats, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "block/{bId}/service/{sId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> getChatsByBlockId(@PathVariable("bId") Long blockId, @PathVariable("sId") Long serviceId) {
-        ServiceChat chats = service.getServiceChatsByBlockIdAndServiceId(blockId, serviceId);
-        if (chats == null)
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        return new ResponseEntity<>(chats, HttpStatus.OK);
-    }
+//    @RequestMapping(value = "block/{bId}/service/{sId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+//    public ResponseEntity<?> getChatsByBlockId(@PathVariable("bId") Long blockId, @PathVariable("sId") Long serviceId) {
+//        ServiceChat chats = service.getServiceChatsByBlockIdAndServiceId(blockId, serviceId);
+//        if (chats == null)
+//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//        return new ResponseEntity<>(chats, HttpStatus.OK);
+//    }
 
 
     @RequestMapping(value = "admin/add", method = RequestMethod.POST)

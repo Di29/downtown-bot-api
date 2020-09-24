@@ -17,8 +17,6 @@ public interface ServiceChatInterface {
 
     List<ServiceChat> getServiceChatsByBlockId(Long blockId);
 
-    ServiceChat getServiceChatsByBlockIdAndServiceId(Long blockId, Long serviceId);
-
     void addServiceChat(ServiceChatInsertUpdateDTO serviceChatInsertUpdateDTO);
 
     void removeServiceChatById(Long id);
