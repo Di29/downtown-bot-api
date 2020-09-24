@@ -13,7 +13,7 @@ public interface ServiceChatInterface {
 
     List<ServiceChat> getAllServiceChats();
 
-    List<ServiceChat> getServiceChatsByServiceId(Long serviceId);
+    ServiceChat getServiceChatsByServiceId(Long serviceId);
 
     List<ServiceChat> getServiceChatsByBlockId(Long blockId);
 

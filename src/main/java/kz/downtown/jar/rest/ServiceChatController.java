@@ -22,7 +22,7 @@ public class ServiceChatController {
     }
 
     @RequestMapping(value = "", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> getAllChats(){
+    public ResponseEntity<?> getAllChats() {
         List<ServiceChat> chats = service.getAllServiceChats();
         if (chats.isEmpty())
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -47,8 +47,8 @@ public class ServiceChatController {
 
     @RequestMapping(value = "service/id/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> getChatByServiceId(@PathVariable("id") Long id) {
-        List<ServiceChat> chats = service.getServiceChatsByServiceId(id);
-        if (chats.isEmpty())
+        ServiceChat chats = service.getServiceChatsByServiceId(id);
+        if (chats == null)
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         return new ResponseEntity<>(chats, HttpStatus.OK);
     }
@@ -97,7 +97,7 @@ public class ServiceChatController {
     public ResponseEntity<?> updateChat(@RequestBody ServiceChatInsertUpdateDTO dto) {
         try {
             service.updateServiceChat(dto);
-        } catch (Exception e){
+        } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("An exception occurred");
         }
         return ResponseEntity.ok().body("Chat updated");

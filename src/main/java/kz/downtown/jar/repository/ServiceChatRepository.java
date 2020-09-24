@@ -9,7 +9,7 @@ public interface ServiceChatRepository extends JpaRepository<ServiceChat, Long> 
 
     ServiceChat findServiceChatByChatId(Long chatId);
 
-    List<ServiceChat> findServiceChatsByServiceId(Long serviceId);
+    ServiceChat findServiceChatsByServiceId(Long serviceId);
 
     List<ServiceChat> findServiceChatsByBlockId(Long blockId);
 
