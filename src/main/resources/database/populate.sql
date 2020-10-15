@@ -1,15 +1,15 @@
 -- insert into blocks(id, block_name) values (1, 'Boston'),
 --                                           (2, 'Dubai'),
 --                                           (3, 'Geneva');
-
-insert into service_chats(id, chat_id, service_id, block_id)
-values
+--
+-- insert into service_chats(id, chat_id, service_id, block_id)
+-- values
 --        (1, -441335534, 2, null),
 --        (2, -279913047, 1, null),
 --        (3, -491705952, 3, null),
 --        (4, -491705952, 8, null),
 --        (5, -491705952, 4, null);
-        (6, -472136192, 9, null);
+        --(6, -472136192, 9, null);
 
 insert into services (id, picture_url, service_name)
 values
@@ -19,7 +19,7 @@ values
 --        (4, 'https://thumbs.dreamstime.com/z/snowman-broom-hat-big-nose-countryside-holding-broomstick-his-hand-86997447.jpg', ':snowman: Вызов Дворника'),
 --        (5, null, ':email: Жалобы и Предложения'),
 --        (6,'https://cdn-images-1.medium.com/max/1600/0*Tu3jmmNEe6Fd_ez_.gif', ':gear: Вызов Инженера');
-            (9, 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.3amfOSbiGDVXmZNswXHmqQHaD6%26pid%3DApi&f=1', ':computer: Вызов программиста');
+            --(9, 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.3amfOSbiGDVXmZNswXHmqQHaD6%26pid%3DApi&f=1', ':computer: Вызов программиста');
 -- insert into subservices (id, service_id, subservice_name)
 -- values (1, 1, 'Влажная уборка'),
 --        (2, 1, 'Уборка сан.узлов'),
@@ -34,6 +34,7 @@ values
 --        (11, 4, 'Уборка урн'),
 --        (13, 5, 'Жалоба'),
 --        (14, 5, 'Предложения по улучшению сервиса');
+            (15, 1, 'Вынос мусора');
 
 -- insert into users (id, name, password, role, surname, username)
 -- values (1, 'admin', '$2y$12$/uW2504kzT896aTyftPPgOr.Z..j9S6rpKKk3cT4l2CWjGax2URIm', 'admin', 'admin', 'admin');
