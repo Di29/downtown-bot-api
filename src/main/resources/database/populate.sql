@@ -11,8 +11,8 @@
 --        (5, -491705952, 4, null);
         --(6, -472136192, 9, null);
 
-insert into services (id, picture_url, service_name)
-values
+-- insert into services (id, picture_url, service_name)
+-- values
 --        (1, 'https://www.business.ru/images/001/1-78.jpg', ':recycle: Вызов Клининговой Компании'),
 --        (2, 'https://kit8.net/images/thumbnails/580/386/detailed/4/at__computer@2x.png', ':woman: Вызов Администратора'),
 --        (3, 'https://www.forwellness.ca/wp-content/uploads/2019/09/Plumber-Cartoon-201709-001.jpg', ':wrench: Вызов Техника'),
@@ -20,8 +20,9 @@ values
 --        (5, null, ':email: Жалобы и Предложения'),
 --        (6,'https://cdn-images-1.medium.com/max/1600/0*Tu3jmmNEe6Fd_ez_.gif', ':gear: Вызов Инженера');
             --(9, 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.3amfOSbiGDVXmZNswXHmqQHaD6%26pid%3DApi&f=1', ':computer: Вызов программиста');
--- insert into subservices (id, service_id, subservice_name)
--- values (1, 1, 'Влажная уборка'),
+insert into subservices (id, service_id, subservice_name)
+values
+       --(1, 1, 'Влажная уборка'),
 --        (2, 1, 'Уборка сан.узлов'),
 --        (3, 1, 'Прочее'),
 --        (4, 3, 'Установка доски, мебели, ручек и пр.'),
@@ -35,6 +36,7 @@ values
 --        (13, 5, 'Жалоба'),
 --        (14, 5, 'Предложения по улучшению сервиса');
             (15, 1, 'Вынос мусора');
+delete from services where id = 15;
 
 -- insert into users (id, name, password, role, surname, username)
 -- values (1, 'admin', '$2y$12$/uW2504kzT896aTyftPPgOr.Z..j9S6rpKKk3cT4l2CWjGax2URIm', 'admin', 'admin', 'admin');
