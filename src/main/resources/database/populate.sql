@@ -8,7 +8,7 @@ values
         (2, -279913047, 1, null),
         (3, -491705952, 3, null),
         (4, -491705952, 8, null),
-        (5, -491705952, 4, null);
+        (5, -491705952, 4, null),
         (6, -472136192, 9, null);
 
  insert into services (id, picture_url, service_name)
@@ -18,7 +18,7 @@ values
         (3, 'https://www.forwellness.ca/wp-content/uploads/2019/09/Plumber-Cartoon-201709-001.jpg', ':wrench: Вызов Техника'),
         (4, 'https://thumbs.dreamstime.com/z/snowman-broom-hat-big-nose-countryside-holding-broomstick-his-hand-86997447.jpg', ':snowman: Вызов Дворника'),
         (5, null, ':email: Жалобы и Предложения'),
-        (6,'https://cdn-images-1.medium.com/max/1600/0*Tu3jmmNEe6Fd_ez_.gif', ':gear: Вызов Инженера');
+        (6,'https://cdn-images-1.medium.com/max/1600/0*Tu3jmmNEe6Fd_ez_.gif', ':gear: Вызов Инженера'),
         (9, 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.3amfOSbiGDVXmZNswXHmqQHaD6%26pid%3DApi&f=1', ':computer: Вызов программиста');
 
 insert into subservices (id, service_id, subservice_name)
@@ -35,7 +35,7 @@ values
        (10, 4, 'Сосульки, снег'),
        (11, 4, 'Уборка урн'),
        (13, 5, 'Жалоба'),
-       (14, 5, 'Предложения по улучшению сервиса');
+       (14, 5, 'Предложения по улучшению сервиса'),
        (15, 1, 'Вынос мусора');
 --delete from services where id = 15;
 
