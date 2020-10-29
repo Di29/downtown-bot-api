@@ -4,12 +4,9 @@ import kz.downtown.jar.dtos.CallInsertUpdateDTO;
 import kz.downtown.jar.models.Call;
 import kz.downtown.jar.repository.CallRepository;
 import kz.downtown.jar.service.interfaces.CallInterface;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
 @Service
 public class CallService implements CallInterface {
@@ -56,20 +53,20 @@ public class CallService implements CallInterface {
         callRepository.deleteById(id);
     }
 
-    @Scheduled
-    public void deleteAllCallTask() {
-        if (isTableEmpty())
-            return;
-
-        Timer timer = new Timer(true);
-        TimerTask task = new TimerTask() {
-            @Override
-            public void run() {
-                callRepository.deleteCallByDate();
-            }
-        };
-        timer.scheduleAtFixedRate(task, 0, 2592000000L);
-    }
+//    @Scheduled
+//    public void deleteAllCallTask() {
+//        if (isTableEmpty())
+//            return;
+//
+//        Timer timer = new Timer(true);
+//        TimerTask task = new TimerTask() {
+//            @Override
+//            public void run() {
+//                callRepository.deleteCallByDate();
+//            }
+//        };
+//        timer.scheduleAtFixedRate(task, 0, 2592000000L);
+//    }
 
     private boolean isTableEmpty() {
         List<Call> calls = getAllCalls();
