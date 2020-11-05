@@ -71,7 +71,7 @@ public class CallController {
 
 
 
-    @RequestMapping(value = "admin/add", method = RequestMethod.POST)
+    @RequestMapping(value = "add", method = RequestMethod.POST)
     public ResponseEntity<?> addCall(@RequestBody CallInsertUpdateDTO dto) {
         try {
             callService.addCall(dto);
