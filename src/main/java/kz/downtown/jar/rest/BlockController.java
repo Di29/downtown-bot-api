@@ -54,7 +54,8 @@ public class BlockController {
     @RequestMapping(value = "admin/add", method = RequestMethod.POST)
     public ResponseEntity<?> createBlock(@RequestBody BlockInsertUpdateDTO blockInsertUpdateDTO) {
         try {
-            blockInsertUpdateDTO.setId(0L);
+            long id = blockService.getDistinctFirstId() + 1;
+            blockInsertUpdateDTO.setId(id);
             blockService.addBlock(blockInsertUpdateDTO);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());

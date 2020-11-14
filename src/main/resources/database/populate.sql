@@ -13,7 +13,7 @@ values
 
  insert into services (id, picture_url, service_name)
  values
-        (1, 'https://www.business.ru/images/001/1-78.jpg', ':recycle: Вызов Клининговой Компании'),
+        (1, ':recycle: Вызов Клининговой Компанииs/001/1-78.jpg', ':recycle: Вызов Клининговой Компании'),
         (2, 'https://kit8.net/images/thumbnails/580/386/detailed/4/at__computer@2x.png', ':woman: Вызов Администратора'),
         (3, 'https://www.forwellness.ca/wp-content/uploads/2019/09/Plumber-Cartoon-201709-001.jpg', ':wrench: Вызов Техника'),
         (4, 'https://thumbs.dreamstime.com/z/snowman-broom-hat-big-nose-countryside-holding-broomstick-his-hand-86997447.jpg', ':snowman: Вызов Дворника'),

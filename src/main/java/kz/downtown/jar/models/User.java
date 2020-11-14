@@ -1,5 +1,6 @@
 package kz.downtown.jar.models;
 
+import kz.downtown.jar.dtos.UserRegisterDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -30,4 +31,12 @@ public class User {
 
     @Column(name = "role")
     private String role;
+
+    public User(UserRegisterDTO dto) {
+        setName(dto.getName());
+        setSurname(dto.getSurname());
+        setUsername(dto.getUsername());
+        setPassword(dto.getPassword());
+        setRole(dto.getRole());
+    }
 }

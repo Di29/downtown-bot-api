@@ -38,6 +38,11 @@ public class BlockService implements BlockInterface {
     }
 
     @Override
+    public long getDistinctFirstId() {
+        return blockRepository.getDistinctFirstId();
+    }
+
+    @Override
     public void addBlock(BlockInsertUpdateDTO blockInsertUpdateDTO) {
         Block block = new Block(blockInsertUpdateDTO);
         blockRepository.save(block);
