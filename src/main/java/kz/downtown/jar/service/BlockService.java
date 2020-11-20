@@ -37,10 +37,10 @@ public class BlockService implements BlockInterface {
         return blockRepository.findByBlockName(name);
     }
 
-    @Override
-    public long getDistinctFirstId() {
-        return blockRepository.getDistinctFirstId();
-    }
+//    @Override
+//    public long getDistinctFirstId() {
+//        return blockRepository.getDistinctFirstId();
+//    }
 
     @Override
     public void addBlock(BlockInsertUpdateDTO blockInsertUpdateDTO) {

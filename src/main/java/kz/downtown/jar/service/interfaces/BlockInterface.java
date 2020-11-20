@@ -15,7 +15,7 @@ public interface BlockInterface {
 
     List<Block> getBlockByName(String name);
 
-    long getDistinctFirstId();
+    //long getDistinctFirstId();
 
     void addBlock(BlockInsertUpdateDTO blockInsertUpdateDTO);
 
