@@ -39,5 +39,7 @@ values
        (15, 1, 'Вынос мусора');
 
  insert into users (id, name, password, role, surname, username)
- values (1, 'admin', '$2y$12$/uW2504kzT896aTyftPPgOr.Z..j9S6rpKKk3cT4l2CWjGax2URIm', 'admin', 'admin', 'admin');
+ #values (1, 'admin', '$2y$12$/uW2504kzT896aTyftPPgOr.Z..j9S6rpKKk3cT4l2CWjGax2URIm', 'admin', 'admin', 'admin');
+values (1, 'admin', '$2y$10$Pi751afNMeRDc5oYvUaanegwoQL29e5hKEkidjJIjPRwlDy819JHa', 'admin', 'admin', 'admin');
+
 
