@@ -40,6 +40,6 @@ values
 
  insert into users (id, name, password, role, surname, username)
  #values (1, 'admin', '$2y$12$/uW2504kzT896aTyftPPgOr.Z..j9S6rpKKk3cT4l2CWjGax2URIm', 'admin', 'admin', 'admin');
-values (1, 'admin', '$2y$10$Pi751afNMeRDc5oYvUaanegwoQL29e5hKEkidjJIjPRwlDy819JHa', 'admin', 'admin', 'admin');
+values (1, 'admin', '$2a$04$3Jm6JgAlYrKeZXDQb98oqurxfr1lUreAOkT9vPqka3Bl7vjEIifzS', 'admin', 'admin', 'admin');
 
 
